@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        videoView.setVideoURI(Uri.parse("https://github.com/shawqihatem/Android-Projects/blob/main/Media-Projects/Video-View-Projects/VideoViewWithRawFile/app/src/main/res/raw/video.mp4"));
+        videoView.setVideoURI(Uri.parse("https://github.com/shawqihatem/Android-Projects/blob/main/Media-Projects/Video-View-Projects/VideoViewWithRawFile/app/src/main/res/raw/video.mp4?raw=true"));
         val mediaController = MediaController(this);
         videoView.setMediaController(mediaController);
         videoView.start();
