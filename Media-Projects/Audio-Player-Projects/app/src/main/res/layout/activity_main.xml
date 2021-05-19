@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:foregroundGravity="center_vertical|center|center_horizontal"
     android:gravity="center|center_vertical"
-    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <Button
@@ -17,4 +16,24 @@
         android:foregroundGravity="center"
         android:gravity="center"
         android:text="Play" />
+
+    <Button
+        android:id="@+id/pauseButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_weight="00"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:text="Pause" />
+
+    <Button
+        android:id="@+id/stopButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:text="Stop" />
 </LinearLayout>

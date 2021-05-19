@@ -10,26 +10,31 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
-        val mediaPlayer = MediaPlayer();
-        var isPlay = true;
+        var mediaPlayer : MediaPlayer ? = null;
 
         playButton.setOnClickListener {
-            if (isPlay) {
-                mediaPlayer.reset();
-                mediaPlayer.setDataSource("android.resource://${packageName}/${R.raw.music}");
-                mediaPlayer.prepare();
-                mediaPlayer.start();
-                playButton.text = "Stop";
+            if (mediaPlayer !== null) {
+                mediaPlayer!!.start();
+                return@setOnClickListener;
             }
 
-            if (!isPlay) {
-                mediaPlayer.stop();
-                playButton.text = "Play";
-            }
+            mediaPlayer = MediaPlayer.create(this, R.raw.music);
+            mediaPlayer!!.isLooping = true;
+            mediaPlayer!!.start();
+        }
 
-            isPlay = !isPlay;
+        pauseButton.setOnClickListener {
+            if (mediaPlayer == null && !mediaPlayer!!.isPlaying) return@setOnClickListener;
+
+            mediaPlayer!!.pause()
+        }
+
+        stopButton.setOnClickListener {
+            if (mediaPlayer == null) return@setOnClickListener;
+
+            mediaPlayer!!.stop();
+            mediaPlayer!!.release();
+            mediaPlayer = null;
         }
     }
 }
