@@ -1,4 +1,4 @@
-package com.example.simpleaudioplayer
+    package com.example.simpleaudioplayer
 
 import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
