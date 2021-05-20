@@ -21,10 +21,10 @@ class MainActivity : AppCompatActivity() {
             val layoutInflater = LayoutInflater.from(this);
             val view = layoutInflater.inflate(R.layout.dialog, null);
 
-            val builder = AlertDialog.Builder(this);
-            builder.setView(view);
+            val dialogBuilder = AlertDialog.Builder(this);
+            dialogBuilder.setView(view);
 
-            val dialog = builder.create();
+            val dialog = dialogBuilder.create();
             dialog.show();
 
             view.addButton.setOnClickListener {
