@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="40dp"
+    tools:context=".MainActivity">
+
+    <ListView
+        android:id="@+id/postsList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:layout_weight="1">
+
+    </ListView>
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:textAllCaps="false"
+        android:fontFamily="@font/medium"
+        android:text="Add Post"
+        android:textSize="16dp"
+        android:background="@drawable/button_primary"
+        android:textColor="@color/white"
+        android:layout_marginBottom="8dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp" />
+
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:textAllCaps="false"
+        android:fontFamily="@font/medium"
+        android:text="Search"
+        android:textSize="16dp"
+        android:background="@drawable/button_secondary"
+        android:textColor="@color/black"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp" />
+</LinearLayout>

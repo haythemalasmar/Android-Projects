@@ -5,7 +5,11 @@ import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 
-class MyDatabase (context: Context) : SQLiteOpenHelper (context, MyDatabase.DATABASE_NAME, null, MyDatabase.DATABASE_VERSION) {
+class MyDatabase (context: Context) : SQLiteOpenHelper (
+        context,
+        MyDatabase.DATABASE_NAME,
+        null,
+        MyDatabase.DATABASE_VERSION) {
     override fun onCreate(db: SQLiteDatabase?) {
         db!!.execSQL(DATABASE_CREATE);
     }
@@ -16,7 +20,7 @@ class MyDatabase (context: Context) : SQLiteOpenHelper (context, MyDatabase.DATA
     }
 
     companion object {
-        val KEY_ID = "_ID";
+        val KEY_ID = "ID";
         val PRODUCT_NAME = "NAME";
         val PRODUCT_QUANTITY = "QUANTITY";
         val DATABASE_TABLE_NAME = "Products";
